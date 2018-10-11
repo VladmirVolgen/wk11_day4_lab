@@ -31,7 +31,7 @@ public class GameTest {
 
     @Test
     public void gameCanStart() {
-        game.startGame();
+        game.startSimpleGame();
         assertEquals(50, game.getDeck().getCards().size());
         assertEquals(1, game.getPlayer1().getCards().size());
         assertEquals(1, game.getPlayer2().getCards().size());
@@ -39,8 +39,14 @@ public class GameTest {
 
     @Test
     public void gameHasTurn() {
-        game.startGame();
+        game.startSimpleGame();
         assertEquals("Alvaro won and Jesse lost!", game.playTurn());
+    }
+
+    @Test
+    public void gamePlayTurns() {
+        game.startGame(4);
+        assertEquals("Jesse's score is  and Alvaro's score is  ", game.playTurns());
     }
 
 }

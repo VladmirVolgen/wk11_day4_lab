@@ -30,6 +30,15 @@ public class Deck {
         return this.cards.remove(0);
     }
 
+    public ArrayList<Card> dealCards(int cards) {
+        ArrayList<Card> cardList = new ArrayList<>();
+        for (int j = 0; j < cards; j++) {
+            cardList.add(this.dealCard());
+        }
+        return cardList;
+    }
+
+
 //    public void shuffle() {
 //        Random rnd = new Random();
 //        for (int i = 0; i < this.cards.size(); i++) {
