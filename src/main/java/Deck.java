@@ -26,6 +26,10 @@ public class Deck {
         Collections.shuffle(cards);
     }
 
+    public Card dealCard() {
+        return this.cards.remove(0);
+    }
+
 //    public void shuffle() {
 //        Random rnd = new Random();
 //        for (int i = 0; i < this.cards.size(); i++) {

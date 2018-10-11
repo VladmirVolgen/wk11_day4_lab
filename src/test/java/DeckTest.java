@@ -34,4 +34,11 @@ public class DeckTest {
         deck.shuffle();
         assertEquals(sortedCards, deck.getCards());
     }
+
+    @Test
+    public void canDealCard() {
+        deck.populate();
+        deck.dealCard();
+        assertEquals(51, deck.getCards().size());
+    }
 }
