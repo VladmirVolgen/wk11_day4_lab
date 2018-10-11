@@ -12,7 +12,7 @@ public class GameTest {
     @Before
     public void before() {
         deck = new Deck();
-//        deck.populate();
+        deck.populate();
         player1 = new Player("Jesse");
         player2 = new Player("Alvaro");
         game = new Game(deck, player1, player2);
@@ -30,6 +30,11 @@ public class GameTest {
     }
 
     @Test
-    public void 
+    public void gameCanStart() {
+        game.startGame();
+        assertEquals(50, game.getDeck().getCards().size());
+        assertEquals(1, game.getPlayer1().getCards().size());
+        assertEquals(1, game.getPlayer2().getCards().size());
+    }
 
 }

@@ -21,4 +21,11 @@ public class Game {
         return deck;
     }
 
+
+    public void startGame() {
+        Card card1 = deck.dealCard();
+        player1.receiveCard(card1);
+        Card card2 = deck.dealCard();
+        player2.receiveCard(card2);
+    }
 }

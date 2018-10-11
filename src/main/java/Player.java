@@ -15,7 +15,7 @@ public class Player {
         return name;
     }
 
-    public void recieveCard(Card card) {
+    public void receiveCard(Card card) {
        cards.add(card);
     }
 

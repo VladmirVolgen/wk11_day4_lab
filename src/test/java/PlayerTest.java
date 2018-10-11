@@ -20,7 +20,7 @@ public class PlayerTest {
 
     @Test
     public void playerHasCards() {
-        player.recieveCard(card);
+        player.receiveCard(card);
         assertEquals(1, player.getCards().size());
     }
 }
