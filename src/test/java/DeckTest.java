@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class DeckTest {
@@ -23,5 +25,13 @@ public class DeckTest {
     public void canAddCards() {
         deck.populate();
         assertEquals(52, deck.getCards().size());
+    }
+
+    @Test
+    public void canRandomise() {
+        deck.populate();
+        ArrayList<Card> sortedCards = deck.getCards();
+        deck.shuffle();
+        assertEquals(sortedCards, deck.getCards());
     }
 }
