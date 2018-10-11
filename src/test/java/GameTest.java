@@ -37,4 +37,10 @@ public class GameTest {
         assertEquals(1, game.getPlayer2().getCards().size());
     }
 
+    @Test
+    public void gameHasTurn() {
+        game.startGame();
+        assertEquals("Alvaro won and Jesse lost!", game.playTurn());
+    }
+
 }
