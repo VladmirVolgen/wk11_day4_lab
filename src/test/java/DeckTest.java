@@ -18,4 +18,10 @@ public class DeckTest {
     public void hasArray() {
         assertEquals(0, deck.getCards().size());
     }
+
+    @Test
+    public void canAddCards() {
+        deck.populate();
+        assertEquals(52, deck.getCards().size());
+    }
 }

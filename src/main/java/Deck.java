@@ -12,4 +12,13 @@ public class Deck {
     public ArrayList<Card> getCards() {
         return this.cards;
     }
+
+    public void populate() {
+        for (SuitType suit : SuitType.values()) {
+
+            for (RankType rank : RankType.values()) {
+                this.cards.add(new Card(suit, rank));
+            }
+        }
+    }
 }
